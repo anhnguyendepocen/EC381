@@ -66,7 +66,7 @@ P_{t+1} - P_{t}&= \varepsilon\\
 \end{align*}
 \end{block}
 \pause
-\vspace{2cm}
+\vspace{1cm}
 where $\varepsilon \sim N(0, \sigma^2)$
 \end{frame}
 
@@ -119,11 +119,12 @@ Not binary (black or white)
 \item This changes over time and place
 \begin{itemize}
 \item Blue chips vs emerging markets and smaller firms
-\item Period of calm and crisis
+\item Periods of calm and crisis
 \end{itemize}
 \end{itemize}
 \pause
-Probably better to think of a \emph{spectrum of efficiency}: from more to less efficiency depending on place and time
+\vspace{1cm}
+Probably better to think of a \emph{spectrum of efficiency}: from more to less efficient depending on place and time
 \end{frame}
 
 \begin{frame}{Fama}
