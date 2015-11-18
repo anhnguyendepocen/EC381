@@ -115,7 +115,7 @@ Mean = \frac{\sum_{t=1}^T (BACR_t)}{T}
 \end{block}
 \pause
 \vspace{1cm}
-Where, $BACR_t$ is Bank of America return at time $t$ and $\sum_{t=1}^T$ means add everything from $t = 1$ to $t = T$
+Where, $BACR_t$ is Bank of America return at time $t$ and $\sum_{t=1}^T$ means add everything from $t = 1$ to $t = T$; $T$ is the total size of the sample.
 \end{frame}
 
 \begin{frame}{Mean return}
