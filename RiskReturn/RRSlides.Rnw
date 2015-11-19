@@ -254,6 +254,57 @@ Property & 0.135 & 0.167\\
 \end{center}
 \end{frame}
 
+\begin{frame}{Property}
+<<rr2, echo=FALSE, fig.height=4.6>>=
+library(RColorBrewer)
+colors <- brewer.pal(n = 5, "Greens")
+cash <- rnorm(10000, 0.065, 0.028)
+bonds <- rnorm(10000, 0.098, 0.122)
+stocks <- rnorm(10000, 0.124, 0.180)
+property <- rnorm(10000, 0.135, 0.167)
+plot(density(property, adjust = 2), xlim = c(-0.6, 0.6), ylim = c(0, 14.0), main = "Distribution of asset returns", xlab = "Return", 
+     col = colors[2])
+#lines(density(stocks, adjust = 2), col = 'red')
+#lines(density(bonds, adjust = 2), col = 'blue')
+#lines(density(cash, adjust = 2), col = 'black')
+legend("topleft", legend = c("property"), fill = colors[2])
+@
+\end{frame}
+
+\begin{frame}{Property and stocks} 
+<<rr3, echo=FALSE, fig.height=4.6>>= 
+plot(density(property, adjust = 2), xlim = c(-0.6, 0.6), ylim = c(0, 14.0), main = "Distribution of asset returns", xlab = "Return", 
+     col = colors[2])
+lines(density(stocks, adjust = 2), col = colors[3])
+#lines(density(bonds, adjust = 2), col = colors[3])
+#lines(density(cash, adjust = 2), col = 'black')
+legend("topleft", legend = c("property", "stocks"), fill = colors[c(2, 3)])
+@
+\end{frame}
+
+\begin{frame}{Property and bonds and stocks}
+<<rr4, echo=FALSE, fig.height=4.6>>=
+#plot(density(property, adjust = 2), xlim = c(-0.6, 0.6), ylim = c(0, 14.0), main = "Distribution of asset returns", xlab = "Return")
+plot(density(property, adjust = 2), xlim = c(-0.6, 0.6), ylim = c(0, 14.0), main = "Distribution of asset returns", xlab = "Return", 
+     col = colors[2])
+lines(density(stocks, adjust = 2), col = colors[3])
+lines(density(bonds, adjust = 2), col = colors[4])
+legend("topleft", legend = c("property","stocks","bonds"), fill = colors[c(2, 3, 4)])
+#lines(density(cash, adjust = 2), col = 'black')
+@
+\end{frame}
+
+\begin{frame}{Property and bonds and stocks and cash}
+<<rr5, echo=FALSE, fig.height=4.6>>=
+plot(density(property, adjust = 2), xlim = c(-0.6, 0.6), ylim = c(0, 14.0), main = "Distribution of asset returns", xlab = "Return",
+     col = colors[2])
+lines(density(stocks, adjust = 2), col = colors[3])
+lines(density(bonds, adjust = 2), col = colors[4])
+lines(density(cash, adjust = 2), col = colors[5])
+legend("topleft", legend = c("property",  "stocks", "bonds", "cash"), fill = colors[c(2, 3, 4, 5)])
+@
+\end{frame}
+
 \begin{frame}{Risk and return}
 <<rr, echo=FALSE, message=FALSE, warning=FALSE, fig.height=4.5>>=
 Risk <- c(0.028, 0.122, 0.180, 0.167)
