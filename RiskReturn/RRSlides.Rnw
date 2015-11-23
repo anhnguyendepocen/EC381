@@ -304,7 +304,17 @@ lines(density(cash, adjust = 2), col = colors[5])
 legend("topleft", legend = c("property",  "stocks", "bonds", "cash"), fill = colors[c(2, 3, 4, 5)])
 @
 \end{frame}
-
+\begin{frame}{Risk and return}
+<<rr, echo=FALSE, message=FALSE, warning=FALSE, fig.height=4.5>>=
+Risk <- c(0.028, 0.122, 0.180, 0.167)
+Return <- c(0.065, 0.098, 0.124, 0.135)
+plot(Risk, Return, ylim = c(0, 0.15), pch = 3)
+text(0.029, 0.065, "Cash", pos =3)
+text(0.122, 0.098, "Bonds", pos = 1)
+text(0.172, 0.124, "Stocks", pos = 1)
+text(0.167, 0.135, "Property", pos = 2)
+abline(a = 0.03, b = 0.6, col = "dark green")
+@
 \begin{frame}{Risk and return}
 <<rr, echo=FALSE, message=FALSE, warning=FALSE, fig.height=4.5>>=
 Risk <- c(0.028, 0.122, 0.180, 0.167)

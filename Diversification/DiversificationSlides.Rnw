@@ -1,0 +1,396 @@
+\documentclass[14pt,xcolor=pdftex,dvipsnames,table]{beamer}
+
+% Specify theme
+\usetheme{Madrid}
+% See deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html for other themes
+\usepackage{caption}
+\usepackage{listing}
+\usepackage{amsmath}
+\usepackage{tikz}
+% Specify base color
+\usecolortheme[named=OliveGreen]{structure}
+% See http://goo.gl/p0Phn for other colors
+
+% Specify other colors and options as required
+\setbeamercolor{alerted text}{fg=Maroon}
+\setbeamertemplate{items}[square]
+
+% Title and author information
+\title{Diversification}
+\author{Rob Hayward}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}{Introduction}
+Some fundamentals
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item \textbf{Diversification} seeks to reduce risk
+\pause
+\begin{block}{}
+\begin{quote}
+``Don't put all your eggs in one basket``
+\end{quote}
+\end{block}
+\pause
+\item this can refer to
+\begin{itemize}
+\item stocks
+\item assets
+\item countries
+\item currencies
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Diversification 1}
+\begin{columns}[T]
+\begin{column}{0.48\linewidth}
+No diversification
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Two assets (A) and (B)
+\item Two outcomes (50:50)
+\begin{itemize}
+\item Good (8\% return)
+\item Bad (4\% return)
+\end{itemize}
+\end{itemize}
+\end{column}
+\pause
+\begin{column}{0.48\linewidth}
+Diversification
+\rowcolors{1}{OliveGreen!20}{OliveGreen!5}
+\begin{tabular}{lll}
+& Asset B &\\
+\hline
+Asset A & Good & Bad\\
+Good & 8 (1/4)& 6 (1/4)\\
+Bad & 6 (1/4) & 4 (1/4)
+\end{tabular}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Expected return}
+\begin{columns}[T]
+\begin{column}{0.48\textwidth}
+\pause
+\begin{block}{}
+\begin{equation*}
+E[R_i] = \sum_{t=1}^T R_t/T
+\end{equation*}
+\end{block}
+\pause
+Refer to previous page
+\begin{block}{}
+\begin{align*}
+E[R_i] &= \frac{8 + 4}{2}\\
+&= 6
+\end{align*}
+\end{block}
+\end{column}
+\begin{column}{0.48\linewidth}
+\pause
+\begin{block}{}
+\begin{equation*}
+E[R_i] = \sum_{t=1}^T R_t/T
+\end{equation*}
+\end{block}
+\pause
+Refer to previous page
+\begin{block}{}
+\begin{align*}
+E[R_i] &= \frac{8 + 6 + 6 + 4}{4}\\
+&= 6
+\end{align*}
+\end{block}
+\end{column}
+\end{columns}
+\end{frame}
+
+
+\begin{frame}{Expected risk}
+\begin{columns}[T]
+\begin{column}{0.48\textwidth}
+\pause
+\begin{block}{}
+\begin{equation*}
+E[V_i] = \sum_{t=1}^T (R_t - \bar{R_i})^2/T
+\end{equation*}
+\end{block}
+\pause
+Refer to previous page
+\begin{block}{}
+\begin{align*}
+[E[V_i] &= 2^2 + -2^2/2\\
+&= 4
+\end{align*}
+\end{block}
+\end{column}
+\begin{column}{0.48\linewidth}
+\pause
+\begin{block}{}
+\begin{equation*}
+E[V_i] = \sum_{t=1}^T (R_t - \bar{R_i})^2/T
+\end{equation*}
+\end{block}
+\pause
+Refer to previous page
+\begin{block}{}
+\begin{align*}
+E[R_i] &= \frac{2^2 + 0^2 + 0^2 + 2^2}{4}\\
+&= 2
+\end{align*}
+\end{block}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Risk and return}
+<<rr, echo=FALSE, message=FALSE, warning=FALSE, fig.height=4.5>>=
+Risk <- c(2, 4)
+Return <- c(6, 6)
+plot(Risk, Return, ylim = c(0, 8), xlim = c(0, 5), pch = 3)
+text(2, 6, "Portfolio", pos = 1)
+text(4.5, 6, "No diversification", pos = 1)
+#text(0.172, 0.124, "Stocks", pos = 1)
+#text(0.167, 0.135, "Property", pos = 2)
+abline(a = 0.00, b = 1.5, col = "dark green")
+@
+\end{frame}
+
+\begin{frame}{Covariance}
+Covariance measures the relationship between two variables
+\pause
+\begin{block}{}
+\begin{equation*}
+Cov_{a, b} = \frac{(a_i - \bar{a})(b_i - \bar{b})}{T^2}
+\end{equation*}
+\end{block}
+\pause
+Correlation is the same measure but from -1 to +1
+\begin{block}{}
+\begin{equation*}
+Corr_{a,b} = \frac{Cov_{a, b}}{Var(a)Var(b)}
+\end{equation*}
+\end{block}
+\end{frame}
+
+\begin{frame}{Diversification 2: correlation = 1}
+\begin{columns}[T]
+\begin{column}{0.48\linewidth}
+Correlation equals 1
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Two assets (A) and (B)
+\item Two outcomes (50:50)
+\begin{itemize}
+\item Good (8\% return)
+\item Bad (4\% return)
+\end{itemize}
+\end{itemize}
+\end{column}
+\pause
+\begin{column}{0.48\linewidth}
+Diversification
+\rowcolors{1}{OliveGreen!20}{OliveGreen!5}
+\begin{tabular}{lll}
+& Asset B &\\
+\hline
+Asset A & Good & Bad\\
+Good & 8 (1/2)& \\
+Bad &  & 4 (1/2)
+\end{tabular}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Diversification 3: correlation = -1}
+\begin{columns}[T]
+\begin{column}{0.48\linewidth}
+Correlation equals -1
+\begin{itemize}[<+-| alert@+>]
+\pause
+\item Two assets (A) and (B)
+\item Two outcomes (50:50)
+\begin{itemize}
+\item Good (8\% return)
+\item Bad (4\% return)
+\end{itemize}
+\end{itemize}
+\end{column}
+\pause
+\begin{column}{0.48\linewidth}
+Diversification
+\rowcolors{1}{OliveGreen!20}{OliveGreen!5}
+\begin{tabular}{lll}
+& Asset B &\\
+\hline
+Asset A & Good & Bad\\
+Good & & 6 (1/2)\\
+Bad & 6 (1/2) & 
+\end{tabular}
+\end{column}
+\end{columns}
+\end{frame}
+
+
+\begin{frame}{Diversification 4}
+\begin{itemize}[<+-| alert@+>]
+\item So long as correlation is less than 1, there is some benefit from diversification
+\item Any negative correlation is really beneficial
+\item Examples
+\begin{itemize}
+\item Stocks vs bonds
+\item Umbrella and ice cream
+\item Value good, Liddle, public transport
+\item Negative income elasticity
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Modern Portfolio Theory 1}
+\begin{itemize}[<+-| alert@+>]
+\item Harry Markowitz (1952)
+\item Mathematical proof that diversification depends on only two things
+\begin{itemize}
+\item The \textbf{market portfolio} including all assets in the world weighted according to their \emph{capitalisation}
+\item The \textbf{risk free asset}
+\end{itemize}
+\pause
+\ Depends on the \textbf{Investment Universe}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{MPT}
+\begin{center}
+\begin{tikzpicture}
+\uncover<1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11>{
+\draw [help lines] (0, 0) grid (10, 6);
+\draw [<->, thick] (0, 6) node (yaxis) [above] {$Return$} 
+  |- (10, 0) node (xaxis) [right] {$Risk$};
+}
+  \uncover<2, 3, 4, 5, 6, 7, 8, 9>{
+\draw [fill] (2, 1.8) circle [radius = 1.8pt];
+\node [below] at (2, 1.8) {A};
+\draw [fill] (4, 2.6) circle [radius = 1.8pt];
+\node [below] at (4, 2.6) {B};
+\draw [fill] (6, 3.4) circle [radius = 1.8pt];
+\node [below] at (6, 3.4) {C};
+\draw [fill] (8, 4.2) circle [radius = 1.8pt];
+\node [below] at (8, 4.2) {D};
+%\draw [teal, domain = 0:10] plot (\x, {1 + 0.4 * \x});
+}
+\uncover<3, 4, 5, 6, 7, 8, 9>{\draw [dashed] (2, 1.8) to [out = 50, in = 180] (4, 2.6);}
+\uncover<4, 5, 6, 7, 8, 9>{\draw [dashed] (6, 3.4) to [out = 50, in = 180] (8, 4.2);}
+\uncover<5, 6, 7, 8, 9>{\draw [dashed] (4, 2.6) to [out = 50, in = 180] (6, 3.4);}
+\uncover<6, 7, 8, 9>{
+  \draw [fill] (2.8, 2.4) circle [radius = 1.8pt];
+  \node [above] at (2.8, 2.4) {E};
+  \draw [fill] (4.8, 3.2) circle [radius = 1.8pt];
+  \node [above] at (4.8, 3.2) {F};
+  \draw [fill] (6.9, 4.1) circle [radius = 1.8pt];
+  \node [above] at (6.9, 4.1) {G};
+  }
+\uncover<7, 8, 9, 10, 11>{
+  \draw [dashed] (2.8, 2.4) to [out = 70, in = 180] (6.9, 4.1);
+  }
+\uncover<8, 9, 10, 11>{
+  \draw [fill] (4.4, 3.9) circle [radius = 1.8pt];
+}
+\uncover<9>{
+\node [above] at (4.4, 3.9) {H};
+}
+\uncover<10, 11>{
+  \node [left] at (0, 2.14) {Rf};
+ \draw [teal, domain = 0:9.65] plot (\x, {2.14 + 0.4 * \x});
+ \node [above] at (4.4, 3.9) {Market Portfolio};
+}
+\uncover<11>{
+\node [below] at (7, 6) {Security Market Line};
+}
+\end{tikzpicture}
+\end{center}
+\end{frame}
+
+\begin{frame}{Modern Portfolio Theory 2}
+There are two assets
+\pause
+\begin{itemize}[<+-| alert@+>]
+\item \emph{The market portfolio}
+\begin{itemize}
+\item Composed of all the assets in the \emph{investment universe} weighted by their {market capitalisation}
+\item This depends on the investment universe
+\end{itemize}
+\item The risk-free asset
+\begin{itemize}
+\item Controversial: is anything risk-free?
+\item Government bond
+\item Treasury bill
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{MPT:2}
+\begin{center}
+\begin{tikzpicture}
+\draw [help lines] (0, 0) grid (10, 6);
+\draw [<->, thick] (0, 6) node (yaxis) [above] {$Return$} 
+  |- (10, 0) node (xaxis) [right] {$Risk$};
+  \draw [dashed] (2.8, 2.4) to [out = 70, in = 180] (6.9, 4.1);
+  \draw [fill] (4.4, 3.9) circle [radius = 1.8pt];
+  \node [left] at (0, 2.14) {Rf};
+ \draw [teal, domain = 0:9.65] plot (\x, {2.14 + 0.4 * \x});
+ \node [above] at (4.4, 3.9) {Market Portfolio};
+\node [below] at (7, 6) {Security Market Line};
+\end{tikzpicture}
+\end{center}
+\end{frame}
+
+\begin{frame}{MOdern Portfolio Theory}
+\begin{itemize}[<+-| alert@+>]
+\item Investment options
+\begin{itemize}
+\item Invest in the risk-free asset
+\item Invest in the market portfolio
+\item Invest in some combination of the two
+\item Borrow money at the risk-free rate and buy more of the market portfolio
+\end{itemize}
+\item Controversy
+\begin{itemize}
+\item Ability to borrow at risk-free rate
+\item Investments can be characterised by risk and return
+\item Securities are appropriately priced for risk and return
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{The assignment}
+The assignment
+\begin{itemize}[<+-| alert@+>]
+\item Does diversification reduce risk? 
+\begin{itemize}
+\item compare a diversified and non-diversified portfolio
+\item How is diversification carried out in practice? 
+\end{itemize}
+\item What is the market portfolio? 
+\item \textbf{Exchange Traded Funds (ETF)}
+\item S\&P 500
+\item Chinese growth index
+\item Diversification across asset classes, countries or currencies
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+
+
+
+
+
+\end{document}
+  
