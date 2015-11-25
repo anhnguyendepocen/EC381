@@ -7,6 +7,7 @@
 \usepackage{listing}
 \usepackage{amsmath}
 \usepackage{tikz}
+\usepackage{caption}
 % Specify base color
 \usecolortheme[named=OliveGreen]{structure}
 % See http://goo.gl/p0Phn for other colors
@@ -352,7 +353,7 @@ There are two assets
 \end{center}
 \end{frame}
 
-\begin{frame}{MOdern Portfolio Theory}
+\begin{frame}{Modern Portfolio Theory}
 \begin{itemize}[<+-| alert@+>]
 \item Investment options
 \begin{itemize}
@@ -370,27 +371,55 @@ There are two assets
 \end{itemize}
 \end{frame}
 
+
+
+\begin{frame}{Correlation}
+\rowcolors{1}{OliveGreen!20}{OliveGreen!5}
+\begin{tabular}{l p{1.29cm} p{1.29cm} p{1.4cm} p{1.3cm}}
+&US equity&UK equity& Emerg' equity& US bonds\\
+\hline
+US equity & 1.00& & & \\
+UK equity & 0.74 & 1.00& &  \\
+Emerging equity & 0.68& 0.56& 1.00& \\
+US bonds & -0.10 & -0.06 & -0.24 & 1.00\\
+\hline
+\end{tabular}
+Correlation matrix 1994:2003
+
+\end{frame}
+
+\begin{frame}{CAPM}
+William Sharpe adapted and simplified the idea to create the \textbf{Capital Asset Pricing Model}
+\begin{block}{}
+\begin{equation*}
+R_i - rf = \alpha + \beta(R_m - rf)
+\end{equation*}
+\end{block}
+\pause
+Where $R_i$ is the return on a particular asset; $R_m$ is the return on the \emph{market}, $rf$ is the risk-free rate; $\beta$ is the measure of risk and the relationship between the return on the security and the return on the market; $\alpha$ should be zero. 
+\end{frame}
+
+
 \begin{frame}{The assignment}
-The assignment
 \begin{itemize}[<+-| alert@+>]
-\item Does diversification reduce risk? 
+\item Does diversification reduce risk?
 \begin{itemize}
-\item compare a diversified and non-diversified portfolio
-\item How is diversification carried out in practice? 
+\item Compare a diversified to non-diversified portfolio
+\item How is diversification carried out in practice
 \end{itemize}
-\item What is the market portfolio? 
-\item \textbf{Exchange Traded Funds (ETF)}
-\item S\&P 500
-\item Chinese growth index
+\item What is the market portfolio?
+\begin{itemize}
+\item \textbf{Exchange traded funds (ETF)}
+\item S\&P 500 index
 \item Diversification across asset classes, countries or currencies
 \end{itemize}
 \end{itemize}
 \end{frame}
-
-
-
-
-
-
 \end{document}
+
+
+
+
+
+
   
