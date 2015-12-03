@@ -77,7 +77,7 @@ There are three levels to the criticisms that are raised against EMH
 The expected return
 \begin{block}{}
 \begin{equation*}
-E[R_i] = \frac{p_{t+1} - P_t}{P_t}
+E[R_i] = \frac{P_{t+1} - P_t}{P_t}
 \end{equation*}
 \end{block}
 \pause
@@ -169,7 +169,7 @@ Decisions will be different depending on the way that the question is \textbf{fr
 \item This is important for investment and trading
 \begin{itemize}
 \item People \emph{take-profits} too quickly
-\item People \emph{Stop losses} to slowly
+\item People \emph{stop losses} too slowly
 \end{itemize}
 \end{itemize}
 \end{frame}
@@ -194,7 +194,7 @@ There are a large number of heuristics.  We will look at two:
 
 \begin{frame}{Taxi problem}
 \begin{block}{}
-A crash in a two with two taxi companies (Green - 85\%; blue - 15\%). Witness identifies cab as blue.  Court tests accuracy of witness as 80\%. What is the probability that the cab involved in the crash was blue?
+A crash in a town with two taxi companies (Green - 85\%; blue - 15\%). Witness identifies cab as blue.  Court tests accuracy of witness as 80\%. What is the probability that the cab involved in the crash was blue?
 \end{block}
 \pause
 \begin{itemize}[<+-| alert@+>]
@@ -355,6 +355,7 @@ Friedman (1953)
 \begin{frame}{Noise-trader risk}
 However, noise-trader risk may limit arbitrage
 \begin{itemize}[<+-| alert@+>]
+\pause
 \item De-Long et al. (1990)
 \item Three period model with noise traders and informed traders
 \item Informed traders may limit their arbitrage because there is a risk that noise traders may drive the price further away from fundamental value
@@ -365,6 +366,7 @@ However, noise-trader risk may limit arbitrage
 \begin{frame}{The assignment}
 For the assignment
 \begin{itemize}[<+-| alert@+>]
+\pause
 \item Look for example of gradual reaction to news
 \begin{itemize}
 \item This can be a more active portfolio
