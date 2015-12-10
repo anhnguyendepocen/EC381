@@ -294,7 +294,7 @@ da1$NC <- da1$Close / Lag(da1$Close, k = 1) *100 - 100
 dat <- as.ts(da1[,c(2:5)])
 # to create one graph on top of the other and extend the margins.
 par(mfrow = c(2, 1), mar = c(2, 4, 2, 2))
-plotOHLC(dat, origin = "2014-12-25", ylab = "SP500", main = "Christmas 2014", xlab = "", xaxt = "n") 
+plotOHLC(dat, origin = "2014-12-25", ylab = "SP500", main = "SP500", xlab = "", xaxt = "n") 
 plot(da1$Date, da1$NC, type = 'l', ylab = "Net Change Oscillator", xlab = "Date")
 abline(h = 1, col = 'red', lty = 2)
 abline(h = -1, col = 'red', lty = 2)

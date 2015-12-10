@@ -13,4 +13,7 @@ plotOHLC(dat, origin = "2014-12-25", ylab = "SP500", main = "Christmas 2014", xl
 plot(da1$Date, da1$NC, type = 'l', ylab = "Net Change Oscillator", xlab = "Date")
 abline(h = 1, col = 'red', lty = 2)
 abline(h = -1, col = 'red', lty = 2)
-
+#------------------------------------
+da$MA3 <- SMA(da$Close, 3)
+da$MA20 <- SMA(da$Close, 20)
+head(da)
