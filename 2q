@@ -1,0 +1,11 @@
+Started the grade analysis and module report.  Needs to be completed. 
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	modified:   .gitignore
+#	new file:   Official/EC381.csv
+#	new file:   Official/gradeAnalysis.R
+#
