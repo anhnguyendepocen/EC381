@@ -1,0 +1,112 @@
+\documentclass[12pt]{hitec} % Paper size, default font size and one-sided paper
+%\graphicspath{{./Figures/}} % Specifies the directory where pictures are stored
+%\usepackage[dcucite]{harvard}
+\usepackage{amsmath}
+\usepackage{setspace}
+\usepackage{tikz}
+\usetikzlibrary{arrows,positioning}
+\usepackage{pdflscape}
+\usepackage{rotating}
+\usepackage[flushleft]{threeparttable}
+\usepackage{multirow}
+\usepackage[comma, sort&compress]{natbib}% Use the natbib reference package - read up on this to edit the reference style; if you want text (e.g. Smith et al., 2012) for the in-text references (instead of numbers), remove 'numbers' 
+\usepackage{graphicx}
+%\bibliographystyle{plainnat}
+\bibliographystyle{agsm}
+\usepackage[colorlinks = true, citecolor = blue, linkcolor = blue]{hyperref}
+%\hypersetup{urlcolor=blue, colorlinks=true} % Colors hyperlinks in blue - change to black if annoying
+%\renewcommand[\harvardurl]{URL: \url}
+\usepackage{listings}
+\usepackage{color}
+\definecolor{mygrey}{gray}{0.95}
+\lstset{backgroundcolor=\color{mygrey}}
+\begin{document}
+\title{Financial and Capital Markets Outline}
+\author{Rob Hayward}
+\date{\today}
+\maketitle
+\section*{Aims and Objectives}
+This course aims to provide you with a broad overview of some of the key areas in the area of financial services.  There are two components to the module:  knowledge and understanding of key financial institutions and financial markets; applying knowledge of finance to create an investment portfolio.  The main topics that will be covered in this module are:  
+\begin{itemize}
+\item The role and functioning of the financial system and the way that various elements are interrelated. The influence of the financial system on corporate behaviour. 
+\item The varied characteristics of the financial system in different countries and the way that this may affect the process of financial intermediation.
+\item	Features of money, bond and equity finance and methods of evaluating the performance of bonds and equities. 
+\item The international aspect of the capital markets. The determination of foreign exchange and the arguments for and against relaxation of capital account controls. 
+\item The interaction between regulation and innovation.  The debate about the level of regulation that is socially optimal.  The characteristics of financial innovation.  
+\item The ideas of Modern Portfolio Theory and Capital Asset Pricing and how these can be applied in practice.  
+\item The operation of the market.  The way that structure affects liquidity and price discovery.  Market-making against electronic markets. \item The scientific method and the role of evidence in the testing of theories.  
+\end{itemize}
+
+\section*{Recommended reading}
+
+The core textbook for this module is 
+
+\vspace{8mm}
+Arnold, G. (2012), \emph{Modern Financial Markets and Institutions}, Prentice Hall 
+
+\vspace{8mm}
+
+Other texts that are also useful.
+
+\vspace{8mm}
+
+Howells P, and Bain K, \emph{The Economics of Money, Banking and Finance, A European Text} (Prentice Hall, 2nd edition).
+\vspace{8mm}
+
+Howells, P \& K. Bain, \emph{Financial Markets and Institutions}, Prentice Hall (5th ed)
+\vspace{8mm}
+
+Mishkin F S, \emph{The Economics of Money, Banking and Financial Markets}, Addison Wesley, 8th edition)
+
+\vspace{8mm}
+Valdez, S., \emph{An Introduction to Global Financial Markets}, Palgrave, 5th edition. 
+\vspace{8mm}
+
+Pilbeam, K. \emph{International Finance}, Palgrave 3rd edition.
+\vspace{8mm}
+
+Vafoukis,Y, Halevi,J, Theodorakis N.J. {Modern Political economics Making Sense of the Post 2008 world}.  Routledge 
+\vspace{8mm}
+
+There are frequently very good, non-technical articles in the Financial Times and The Economist magazine. 
+
+\section*{Teaching Methods}
+
+Each week a key concept will be covered in the lecture and in the seminar class of the following week.  We use the seminar class to discuss article and exercises that have been give for preparatory work.  It is essential that you complete this preparatory work if you are going to get a good grade as it will ensure that you fully understand the foundation topics before we move on to more challenging subjects. We will use the Rotman Interactive Trading software to give you a feel for how trading in financial markets is carried out. 
+
+\section*{Assessment}
+There are two assessments.  At the end of the year there is an unseen 3-hour exam. The exam will be based on what we cover in the lectures and seminars.  There is also a 1,250 word report on your investment portfolio.  The portfolio can be constructed using whatever means that you believe will be successful.  We aim to have the portfolio constructed by early January so that we can monitor its performance through the first half of the year.  You report will combine some discussion of the thinking behind your construction0on of the portfolio as well as an overview of the investment performance. 
+
+\section*{Schedule}
+\begin{tabular}{l l c}
+Week & Topic & Reading\\
+\hline
+6 Oct & Introduction & pp. 1-25\\
+13 Oct & Financial Institutions & pp. 20-24/75-166/556-599\\
+20 Oct& Equity Market & pp. 328-411\\
+27 Oct&Trading Strategies & Student central\\
+3 Nov &Financial Markets & Student central\\
+10 Nov & Reading Week & \\
+17 Nov & Efficient Market Hypothesis& Student central \\
+24 Nov & Risk and Return & Student central\\
+1 Dec & Behavioural Finance & Student central \\
+8 Dec & Risk and Return 2 & Student central\\
+15 Dec & Portfolio construction& Student central\\
+\hline
+12 Jan &The Banking System & pp.39-74 \\
+19 Jan & The Central Bank & pp.285-327\\
+26 Jan & The Money Markets & pp.168-217 \\
+2 Feb & Reading Week & \\
+9 Feb & Derivatives & pp.412-479\\
+16 Feb & The Bond Market & pp.220-281\\
+23 Feb & Periodic Crisis & pp.645-677\\
+2 Mar&  Chaos and technical analysis & Student central\\
+9 Mar & Technical trading & Student central\\
+16 Mar & Regulation & p. 602-644\\
+23 Mar &  Innovation & Student central \\
+30 Mar & Islamic Finance & \\
+\hline
+27 Apr& Revision& \\
+\end{tabular}
+
+\end{document}
