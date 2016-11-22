@@ -8,7 +8,7 @@
 % Specify base color
 \usecolortheme[named=OliveGreen]{structure}
 % See http://goo.gl/p0Phn for other colors
-
+\graphicspath{{./Pictures/}}
 % Specify other colors and options as required
 \setbeamercolor{alerted text}{fg=Maroon}
 \setbeamertemplate{items}[square]
@@ -56,9 +56,14 @@ Expected risk involves the same estimation problem as expected return with added
 \item Uncertainty cannot be quantified 
 \item Frank Knight (1921)
 \item Keynes (1936)
-\item Nassim Telab (2007): \emph{Black Swan}
+\item Nassim Taleb (2007): \emph{Black Swan}
 \end{itemize}
 \end{itemize}
+\end{frame}
+
+\begin{frame}{Nassim Taleb}
+\centering
+\includegraphics{Taleb_mug}
 \end{frame}
 
 \begin{frame}{Sampling}
@@ -308,18 +313,7 @@ legend("topleft", legend = c("property",  "stocks", "bonds", "cash"), fill = col
 <<rr, echo=FALSE, message=FALSE, warning=FALSE, fig.height=4.5>>=
 Risk <- c(0.028, 0.122, 0.180, 0.167)
 Return <- c(0.065, 0.098, 0.124, 0.135)
-plot(Risk, Return, ylim = c(0, 0.15), pch = 3)
-text(0.029, 0.065, "Cash", pos =3)
-text(0.122, 0.098, "Bonds", pos = 1)
-text(0.172, 0.124, "Stocks", pos = 1)
-text(0.167, 0.135, "Property", pos = 2)
-abline(a = 0.03, b = 0.6, col = "dark green")
-@
-\begin{frame}{Risk and return}
-<<rr, echo=FALSE, message=FALSE, warning=FALSE, fig.height=4.5>>=
-Risk <- c(0.028, 0.122, 0.180, 0.167)
-Return <- c(0.065, 0.098, 0.124, 0.135)
-plot(Risk, Return, ylim = c(0, 0.15), pch = 3)
+plot(Risk, Return, ylim = c(0, 0.15), pch = 3, main = "Risk and return of assets")
 text(0.029, 0.065, "Cash", pos =3)
 text(0.122, 0.098, "Bonds", pos = 1)
 text(0.172, 0.124, "Stocks", pos = 1)
@@ -327,6 +321,7 @@ text(0.167, 0.135, "Property", pos = 2)
 abline(a = 0.03, b = 0.6, col = "dark green")
 @
 \end{frame}
+
 
 \begin{frame}{Assignment}
 Possible assignment options
