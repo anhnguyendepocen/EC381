@@ -171,12 +171,12 @@ The variance about the mean
 \pause
 \begin{block}{}
 \begin{equation*}
-variance = \frac{\sum_{t=1}^T (BACR_t - \mu_{BACR})^2}{T - 1}
+variance = \frac{\sum_{t=1}^T (BACR_t - \bar{BACR})^2}{T - 1}
 \end{equation*}
 \end{block}
 \pause
 \vspace{1cm}
-Where $\mu_{BACR}$ is the mean of Bank of America returns.
+Where $\bar{BACR}$ is the mean of Bank of America returns.
 \end{frame}
 
 \begin{frame}{Standard deviation}
@@ -185,7 +185,7 @@ Because variance is denominated in squared returns, it is often easier to use th
 \begin{block}{}
 \begin{align*}
 sd =& \sqrt(var)\\
-sd =& \sqrt{\frac{\sum_{t=1}^T (BARC_t = mu_{BACR})^2}{T-1}}\\
+sd =& \sqrt{\frac{\sum_{t=1}^T (BARC_t = \bar{BACR})^2}{T-1}}\\
 \end{align*}
 \end{block}
 \end{frame}
