@@ -170,7 +170,7 @@ Covariance measures the relationship between two variables
 \pause
 \begin{block}{}
 \begin{equation*}
-Cov_{a, b} = \frac{(a_i - \bar{a})(b_i - \bar{b})}{T^2}
+Cov_{a, b} = \frac{(a_i - \bar{a})(b_i - \bar{b})}{T}
 \end{equation*}
 \end{block}
 \pause
@@ -406,6 +406,7 @@ Where $R_i$ is the return on a particular asset; $R_m$ is the return on the \emp
 \begin{itemize}
 \item Compare a diversified to non-diversified portfolio
 \item How is diversification carried out in practice
+\item Compare beta to your own measure of risk
 \end{itemize}
 \item What is the market portfolio?
 \begin{itemize}
