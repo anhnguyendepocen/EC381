@@ -22,11 +22,10 @@ x2
 length(da2$ID)
 da2$ID
 mosaicplot(x2, main = "Blue and Green Cabs correct and incorrect identification", 
-             xlab = "Cab colour", ylab = "Identification", color = colours, 
-           labeling = labeling_values)
+             xlab = "Cab colour", ylab = "Identification", color = colours)
+# set the text positioin as a percentage of the plot space for x and y. 
+text(x = 0.1, y = 0.5, label = 0.12)
+text(x = 0.1, y = 0.9, label = 0.03)
+text(x = 0.6, y = 0.5, label = 0.68)
+text(x = 0.6, y = 0.9, label = 0.17)
 text(x = 15, y = 16, labels = "12.5", pos = 4)
-labeling_cells(text = tab, margin = 0)(Titanic)
-mosaicplot(x2, pop = FALSE, labeling = labeling_values)
-mosaic(Titanic, pop = FALSE, margin = 0)(x2)
-mosaic(Titanic, labeling = labeling_values)
-labeling_left
