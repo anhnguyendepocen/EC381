@@ -228,7 +228,8 @@ for(i in 341:349){
   da2$ID[i] <- 0
 }
 x2 <- table(da2)
-mosaicplot(x2, main = "Blue and Green Cabs correct and incorrect identification",              xlab = "Cab colour", ylab = "Identification", color = colours)
+mosaicplot(x2, main = "Blue and Green Cabs correct and incorrect identification",  
+           xlab = "Cab colour", ylab = "Identification", color = colours)
 text(x = 0.1, y = 0.5, label = 0.12)
 text(x = 0.1, y = 0.9, label = 0.03)
 text(x = 0.6, y = 0.5, label = 0.68)
