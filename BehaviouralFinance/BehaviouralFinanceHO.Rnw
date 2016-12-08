@@ -1,4 +1,4 @@
-\documentclass[14pt,xcolor=pdftex,dvipsnames,table, handout]{beamer}
+\documentclass[14pt,xcolor=pdftex,dvipsnames,table,handout]{beamer}
 
 % Specify theme
 \usetheme{Madrid}
@@ -77,7 +77,7 @@ There are three levels to the criticisms that are raised against EMH
 The expected return
 \begin{block}{}
 \begin{equation*}
-E[R_i] = \frac{p_{t+1} - P_t}{P_t}
+E[R_i] = \frac{P_{t+1} - P_t}{P_t}
 \end{equation*}
 \end{block}
 \pause
@@ -85,11 +85,11 @@ However,
 \begin{block}{}
 If: 
 \begin{equation*}
-E[P_{t+1}] > 0; E[R_t] > 0
+E[P_{t+1}] > P_t; \quad E[R_t] > 0
 \end{equation*}
 and, if
 \begin{equation*}
-E[P_{t+1}] < 0; E[R_t] > 0
+E[P_{t+1}] < P_t; \quad E[R_t] > 0
 \end{equation*}
 \end{block}
 \end{frame}
@@ -169,7 +169,7 @@ Decisions will be different depending on the way that the question is \textbf{fr
 \item This is important for investment and trading
 \begin{itemize}
 \item People \emph{take-profits} too quickly
-\item People \emph{Stop losses} to slowly
+\item People \emph{stop losses} too slowly
 \end{itemize}
 \end{itemize}
 \end{frame}
@@ -194,7 +194,7 @@ There are a large number of heuristics.  We will look at two:
 
 \begin{frame}{Taxi problem}
 \begin{block}{}
-A crash in a two with two taxi companies (Green - 85\%; blue - 15\%). Witness identifies cab as blue.  Court tests accuracy of witness as 80\%. What is the probability that the cab involved in the crash was blue?
+A crash in a town with two taxi companies (Green - 85\%; blue - 15\%). Witness identifies cab as blue.  Court tests accuracy of witness as 80\%. What is the probability that the cab involved in the crash was blue?
 \end{block}
 \pause
 \begin{itemize}[<+-| alert@+>]
@@ -204,7 +204,7 @@ A crash in a two with two taxi companies (Green - 85\%; blue - 15\%). Witness id
 \end{frame}
 
 \begin{frame}{Share of taxis in town}
-<<mosaic, echo=FALSE, fig.height=4.6>>=
+<<mosaic, echo=FALSE, fig.height=4.6, warning=FALSE>>=
 library(RColorBrewer)
 colours <- brewer.pal(n = 4, "Greens")
 GreenCab <- rep("Green", 20*17)
@@ -218,7 +218,7 @@ mosaicplot(x, color = colours, xlab = "",
 \end{frame}
 
 \begin{frame}{Correctly identified taxis}
-<<Mosaic2, echo=FALSE, fig.height=4.6>>=
+<<Mosaic2, echo=FALSE, fig.height=4.6, warning = FALSE>>=
 ID <- rep(1, length(da1))
 da2 <- data.frame(da1, ID)
 for(i in 1:51){
@@ -228,7 +228,12 @@ for(i in 341:349){
   da2$ID[i] <- 0
 }
 x2 <- table(da2)
-mosaicplot(x2, main = "Blue and Green Cabs correct and incorrect identification",              xlab = "Cab colour", ylab = "Identification", color = colours)
+mosaicplot(x2, main = "Blue and Green Cabs correct and incorrect identification",  
+           xlab = "Cab colour", ylab = "Identification", color = colours)
+text(x = 0.1, y = 0.5, label = 0.12)
+text(x = 0.1, y = 0.9, label = 0.03)
+text(x = 0.6, y = 0.5, label = 0.68)
+text(x = 0.6, y = 0.9, label = 0.17)
 @
 \end{frame}
 
@@ -290,7 +295,7 @@ De Bondt and Thaler (1985)
 \end{frame}
 
 \begin{frame}{Efficient reaction to information}
-<<info1, echo=FALSE, fig.height=4.8>>=
+<<info1, echo=FALSE, fig.height=4.8, warning=FALSE>>=
 x <- seq(-5, 5, 1)
 y <- c(0, 0, 0, 0, 0, 0, NA, NA, NA, NA, NA)
 plot(x, y, type = 'l', ylim = c(-4, 8), xlab = "Event Days", ylab = "Return", 
@@ -304,7 +309,7 @@ lines(z2)
 \end{frame}
 
 \begin{frame}{Under-reaction to information}
-<<info2, echo=FALSE, fig.height=4.8>>=
+<<info2, echo=FALSE, fig.height=4.8, warning=FALSE>>=
 x <- seq(-5, 5, 1)
 y <- c(0, 0, 0, 0, 0, 0, NA, NA, NA, NA, NA)
 plot(x, y, type = 'l', ylim = c(-4, 8), xlab = "Event Days", ylab = "Return", 
@@ -321,7 +326,7 @@ text(2.4, 2, "Under-reaction")
 \end{frame}
 
 \begin{frame}{Over-reaction to information}
-<<info3, echo=FALSE, fig.height=4.8>>=
+<<info3, echo=FALSE, fig.height=4.8, warning=FALSE>>=
 x <- seq(-5, 5, 1)
 y <- c(0, 0, 0, 0, 0, 0, NA, NA, NA, NA, NA)
 plot(x, y, type = 'l', ylim = c(-4, 8), xlab = "Event Days", ylab = "Return", 
@@ -355,6 +360,7 @@ Friedman (1953)
 \begin{frame}{Noise-trader risk}
 However, noise-trader risk may limit arbitrage
 \begin{itemize}[<+-| alert@+>]
+\pause
 \item De-Long et al. (1990)
 \item Three period model with noise traders and informed traders
 \item Informed traders may limit their arbitrage because there is a risk that noise traders may drive the price further away from fundamental value
@@ -365,6 +371,7 @@ However, noise-trader risk may limit arbitrage
 \begin{frame}{The assignment}
 For the assignment
 \begin{itemize}[<+-| alert@+>]
+\pause
 \item Look for example of gradual reaction to news
 \begin{itemize}
 \item This can be a more active portfolio

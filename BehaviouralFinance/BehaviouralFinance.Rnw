@@ -204,7 +204,7 @@ A crash in a town with two taxi companies (Green - 85\%; blue - 15\%). Witness i
 \end{frame}
 
 \begin{frame}{Share of taxis in town}
-<<mosaic, echo=FALSE, fig.height=4.6>>=
+<<mosaic, echo=FALSE, fig.height=4.6, warning=FALSE>>=
 library(RColorBrewer)
 colours <- brewer.pal(n = 4, "Greens")
 GreenCab <- rep("Green", 20*17)
@@ -218,7 +218,7 @@ mosaicplot(x, color = colours, xlab = "",
 \end{frame}
 
 \begin{frame}{Correctly identified taxis}
-<<Mosaic2, echo=FALSE, fig.height=4.6>>=
+<<Mosaic2, echo=FALSE, fig.height=4.6, warning = FALSE>>=
 ID <- rep(1, length(da1))
 da2 <- data.frame(da1, ID)
 for(i in 1:51){
@@ -295,7 +295,7 @@ De Bondt and Thaler (1985)
 \end{frame}
 
 \begin{frame}{Efficient reaction to information}
-<<info1, echo=FALSE, fig.height=4.8>>=
+<<info1, echo=FALSE, fig.height=4.8, warning=FALSE>>=
 x <- seq(-5, 5, 1)
 y <- c(0, 0, 0, 0, 0, 0, NA, NA, NA, NA, NA)
 plot(x, y, type = 'l', ylim = c(-4, 8), xlab = "Event Days", ylab = "Return", 
@@ -309,7 +309,7 @@ lines(z2)
 \end{frame}
 
 \begin{frame}{Under-reaction to information}
-<<info2, echo=FALSE, fig.height=4.8>>=
+<<info2, echo=FALSE, fig.height=4.8, warning=FALSE>>=
 x <- seq(-5, 5, 1)
 y <- c(0, 0, 0, 0, 0, 0, NA, NA, NA, NA, NA)
 plot(x, y, type = 'l', ylim = c(-4, 8), xlab = "Event Days", ylab = "Return", 
@@ -326,7 +326,7 @@ text(2.4, 2, "Under-reaction")
 \end{frame}
 
 \begin{frame}{Over-reaction to information}
-<<info3, echo=FALSE, fig.height=4.8>>=
+<<info3, echo=FALSE, fig.height=4.8, warning=FALSE>>=
 x <- seq(-5, 5, 1)
 y <- c(0, 0, 0, 0, 0, 0, NA, NA, NA, NA, NA)
 plot(x, y, type = 'l', ylim = c(-4, 8), xlab = "Event Days", ylab = "Return", 
