@@ -39,7 +39,7 @@ These are not newly discovered: investors and traders have been trying to identi
 \end{block}
 \end{frame}
 \begin{frame}{Efficient reaction to information}
-<<info1, echo=FALSE, fig.height=4.8>>=
+<<info1, echo=FALSE, fig.height=4.8, warning=FALSE>>=
 x <- seq(-5, 5, 1)
 y <- c(0, 0, 0, 0, 0, 0, NA, NA, NA, NA, NA)
 plot(x, y, type = 'l', ylim = c(-4, 8), xlab = "Event Days", ylab = "Return", 
@@ -53,7 +53,7 @@ lines(z2)
 \end{frame}
 
 \begin{frame}{Under-reaction to information}
-<<info2, echo=FALSE, fig.height=4.8>>=
+<<info2, echo=FALSE, fig.height=4.8, warning=FALSE>>=
 x <- seq(-5, 5, 1)
 y <- c(0, 0, 0, 0, 0, 0, NA, NA, NA, NA, NA)
 plot(x, y, type = 'l', ylim = c(-4, 8), xlab = "Event Days", ylab = "Return", 
@@ -70,7 +70,7 @@ text(2.4, 2, "Under-reaction")
 \end{frame}
 
 \begin{frame}{Over-reaction to information}
-<<info3, echo=FALSE, fig.height=4.8>>=
+<<info3, echo=FALSE, fig.height=4.8, warning=FALSE>>=
 x <- seq(-5, 5, 1)
 y <- c(0, 0, 0, 0, 0, 0, NA, NA, NA, NA, NA)
 plot(x, y, type = 'l', ylim = c(-4, 8), xlab = "Event Days", ylab = "Return", 
@@ -124,11 +124,11 @@ However,
 \begin{block}{}
 If: 
 \begin{equation*}
-E[P_{t+1}] > 0; E[R_t] > 0
+E[P_{t+1}] > P_t; \quad E[R_t] > 0
 \end{equation*}
 and, if
 \begin{equation*}
-E[P_{t+1}] < 0; E[R_t] > 0
+E[P_{t+1}] < P_t; \quad E[R_t] > 0
 \end{equation*}
 \end{block}
 \end{frame}
